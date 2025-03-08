@@ -9,14 +9,8 @@ from babel.numbers import format_currency
 sns.set(style='dark')
 
 #Load dataset
-@st.cache_data
-def load_data():
-    df = pd.read_csv("all_df.csv")
-    df["date"] = pd.to_datetime(df["date"])
-    return df
-
-all_df = load_data()
-
+all_df = pd.read_csv("all_df.csv")
+all_df["date"] = pd.to_datetime(all_df["date"])
 file_path = os.path.join(os.path.dirname(__file__), "all_df.csv")
 
 #Fungsi untuk visualisasi data
