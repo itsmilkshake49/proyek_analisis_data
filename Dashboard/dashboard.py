@@ -17,6 +17,8 @@ def load_data():
 
 all_df = load_data()
 
+file_path = os.path.join(os.path.dirname(__file__), "all_df.csv")
+
 #Fungsi untuk visualisasi data
 ## Fungsi menentukan musim berdasarkan bulan
 def get_season(month):
