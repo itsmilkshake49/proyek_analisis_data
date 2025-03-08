@@ -9,7 +9,7 @@ from babel.numbers import format_currency
 sns.set(style='dark')
 
 #Load dataset
-all_df = pd.read_csv("data/all_df.csv")
+all_df = pd.read_csv("Dashboard/all_df.csv")
 all_df["date"] = pd.to_datetime(all_df["date"])
 file_path = os.path.join(os.path.dirname(__file__), "all_df.csv")
 
