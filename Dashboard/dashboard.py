@@ -10,7 +10,7 @@ sns.set(style='dark')
 #Load dataset
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Users\Dell\Desktop\DICODING\Python\proyek_andat1\Dashboard\all_df.csv")
+    df = pd.read_csv("all_df.csv")
     df["date"] = pd.to_datetime(df["date"])
     return df
 
