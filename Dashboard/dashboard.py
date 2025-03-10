@@ -8,13 +8,8 @@ from babel.numbers import format_currency
 sns.set(style='dark')
 
 #Load dataset
-@st.cache_data
-def load_data():
-    df = pd.read_csv(r"C:\Users\Dell\Desktop\DICODING\Python\proyek_andat1\Dashboard\all_df.csv")
-    df["date"] = pd.to_datetime(df["date"])
-    return df
-
-all_df = load_data()
+all_df = pd.read_csv("Dashboard/all_df.csv")
+all_df["date"] = pd.to_datetime(all_df["date"])
 
 #Fungsi untuk visualisasi data
 ## Fungsi menentukan musim berdasarkan bulan
